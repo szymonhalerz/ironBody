@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ironBody</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ironBody</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/20e2212097.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dist/css/hamburger.min.css" />
+		<link rel="stylesheet" href="dist/css/main.min.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="wrapper">
+				<div class="navbar">
+					<div class="brand-logo">
+						<a href="index.html"><i class="fa-solid fa-dumbbell"></i> ironBody</a>
+					</div>
 
-</body>
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+
+					<nav class="nav nav-desktop">
+						<a class="nav__link active" href="#home">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#calcultors">Kalkulatory</a>
+						<a class="nav__link" href="blog.html">Blog</a>
+						<a class="nav__link" href="contact.html">Kontakt</a>
+					</nav>
+
+					<nav class="nav nav-mobile">
+						<a class="nav__link" href="index.html">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#calcultors">Kalkulatory</a>
+						<a class="nav__link" href="blog.html">Blog</a>
+						<a class="nav__link" href="contact.html">Kontakt</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<script src="dist/js/main.min.js"></script>
+	</body>
 </html>

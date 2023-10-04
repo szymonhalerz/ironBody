@@ -1,0 +1,207 @@
+@use 'colors' as c;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+// header
+.header {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: c.$navy;
+	z-index: 1000;
+
+	.navbar {
+		position: relative;
+		padding: 1em;
+
+		.brand-logo {
+			a {
+				text-decoration: none;
+				font-size: 2.2rem;
+				color: c.$white;
+                transform: color .3s;
+
+                &:hover {
+                    color: c.$blues;
+                }
+			}
+
+			i {
+				font-size: 2.8rem;
+			}
+		}
+
+		.hamburger {
+			position: absolute;
+			top: 2.2em;
+			right: 1em;
+			transform: translateY(-50%);
+			z-index: 500;
+
+			&-inner,
+			&-inner:before,
+			&-inner:after {
+				background-color: c.$white;
+				z-index: 500;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.nav {
+			&-desktop {
+				display: none;
+			}
+
+			&-mobile {
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: c.$navy;
+				overflow: scroll;
+				transform: translateX(-102%);
+				transition: transform 0.3s;
+				z-index: 10;
+
+				&--active {
+					transform: translateX(0);
+				}
+			}
+
+			&__link {
+				position: relative;
+				display: inline-block;
+				margin: 0.5em 0em;
+				padding: 0.5em 1em;
+				text-decoration: none;
+				font-size: 1.6rem;
+				color: c.$white;
+				transition: font-weight 0.3s, transform 0.3s;
+
+				&:hover {
+					font-weight: bold;
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 568px) {
+	// header
+	.header {
+		.navbar {
+			.brand-logo {
+				a {
+					font-size: 2.7rem;
+				}
+
+				i {
+					font-size: 3.5rem;
+				}
+			}
+
+			.nav {
+				&__link {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+	// header
+	.header {
+		.navbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0em 1em;
+
+			// .brand-logo {
+			// 	a {
+			// 		text-decoration: none;
+			// 		font-size: 2.2rem;
+			// 		color: c.$white;
+			// 	}
+
+			// 	i {
+			// 		font-size: 2.8rem;
+			// 	}
+			// }
+
+			.hamburger {
+				display: none;
+			}
+
+			.nav {
+				&-desktop {
+					display: flex;
+				}
+
+				&-mobile {
+					display: none;
+				}
+
+				&__link {
+					margin: 0em;
+					padding: 2em 1.8em;
+					font-size: 1.7rem;
+					transition: background-color 0.3s, color 0.3s, font-weight 0.3s, transform 0.3s;
+
+					&:hover {
+						background-color: c.$white;
+						color: c.$black;
+						font-weight: normal;
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+}
