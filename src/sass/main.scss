@@ -23,6 +23,7 @@ body {
 	padding-top: 3.2em;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -267,6 +268,129 @@ body {
 	}
 }
 
+//contact
+.contact {
+	margin-top: 3em;
+	padding: 0em 1em;
+
+	.head-title {
+		margin-bottom: 1.5em;
+	}
+
+	.sub-title {
+		margin-bottom: 2em;
+		text-align: center;
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: c.$light-navy;
+	}
+
+	.contact-box {
+		.contact-dates {
+			.data-container {
+				margin: 1em 0em;
+				padding: 2em;
+				background-color: c.$black;
+				border-radius: 0.8em;
+
+				.link,
+				.phone-number,
+				.email-adres {
+					color: c.$white;
+
+					.fa-solid {
+						margin-right: 0.2em;
+					}
+				}
+
+				.title {
+					margin-bottom: 1em;
+					padding-bottom: 0.2em;
+					font-size: 1.7rem;
+					text-align: center;
+					text-transform: uppercase;
+					color: c.$white;
+					border-bottom: 1px solid white;
+				}
+
+				.social-media {
+					display: flex;
+					justify-content: space-evenly;
+
+					.link {
+						margin-bottom: 0.5em;
+						font-size: 2.8rem;
+						text-decoration: none;
+						cursor: pointer;
+					}
+				}
+
+				.other-data {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					.phone-number,
+					.email-adres {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin: 0.5em;
+
+						.fa-solid {
+							margin-right: 0.5em;
+							font-size: 2.5rem;
+						}
+					}
+				}
+			}
+		}
+
+		.adress {
+			margin-top: 3em;
+			margin-bottom: 1em;
+			font-size: 1.6rem;
+			font-weight: bold;
+			text-align: center;
+			color: c.$light-navy;
+		}
+
+		.map {
+			margin-bottom: 2em;
+			width: 100%;
+			border-radius: 0.8em;
+		}
+	}
+}
+
+// footer
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 1em;
+	background-color: c.$navy;
+
+	&__top {
+		display: none;
+	}
+
+	.line {
+		display: none;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+		color: c.$white;
+		font-size: 1.4rem;
+	}
+}
+
 @media (min-width: 568px) {
 	.head-title {
 		font-size: 2.3rem;
@@ -352,6 +476,15 @@ body {
 			}
 		}
 	}
+
+	// footer
+	.footer {
+		margin-top: 1.5em;
+
+		&__bottom {
+			padding: 2em;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -402,6 +535,25 @@ body {
 				width: 85%;
 				font-size: 1.7rem;
 			}
+		}
+	}
+
+	// footer
+	.footer {
+		margin-top: 2em;
+
+		&__top {
+			display: flex;
+			padding: 2.5em 3em;
+			color: c.$white;
+			font-size: 1.5rem;
+		}
+
+		.line {
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: c.$white;
 		}
 	}
 }

@@ -1,5 +1,6 @@
 const burgerBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav-mobile')
+const footerYear = document.querySelector('.footer__year')
 
 const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
@@ -15,4 +16,10 @@ navMobile.querySelectorAll('a.nav__link').forEach(el =>
 	})
 )
 
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
 burgerBtn.addEventListener('click', handleNav)
+handleCurrentYear()
