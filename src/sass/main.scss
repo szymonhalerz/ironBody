@@ -16,6 +16,7 @@ body {
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 125px;
 }
 
 body {
@@ -37,6 +38,10 @@ body {
 	text-transform: uppercase;
 	font-size: 2rem;
 	color: c.$navy;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 // header
@@ -187,10 +192,6 @@ body {
 			margin-bottom: 1.2em;
 			font-size: 1.5rem;
 			line-height: 1.7em;
-
-			.bold {
-				font-weight: bold;
-			}
 		}
 	}
 
@@ -219,7 +220,58 @@ body {
 	}
 }
 
+//calculators
+.calculators {
+	padding: 0em 1em;
+
+	.head-title {
+		.fa-calculator {
+			margin-right: 0.2em;
+		}
+	}
+
+	.about-calculator {
+		margin-bottom: 1em;
+		font-size: 1.5rem;
+		line-height: 1.7em;
+	}
+
+	.links-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		.link {
+			display: inline-block;
+			text-align: center;
+			margin: 0.5em;
+			padding: 0.7em 1.5em;
+			width: 95%;
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-decoration: none;
+			background-color: c.$blue;
+			color: c.$white;
+			border-top-right-radius: 1.3em;
+			border-bottom-left-radius: 1.3em;
+			cursor: pointer;
+			transition: background-color 0.3s, border-radius 0.3s, transform 0.3s;
+
+			&:hover {
+				background-color: c.$light-navy;
+				border-radius: 1.3em;
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
 @media (min-width: 568px) {
+	.head-title {
+		font-size: 2.3rem;
+	}
+
 	// header
 	.header {
 		.navbar {
@@ -257,10 +309,6 @@ body {
 		}
 	}
 
-	.head-title {
-		font-size: 2.3rem;
-	}
-
 	//aboutus
 	.aboutus {
 		padding: 0em 2em;
@@ -285,9 +333,32 @@ body {
 			}
 		}
 	}
+
+	//calculators
+	.calculators {
+		padding: 0em 2em;
+
+		.about-calculator {
+			margin-bottom: 1.3em;
+			font-size: 1.6rem;
+			line-height: 2em;
+		}
+
+		.links-box {
+			.link {
+				padding: 1.2em 1.5em;
+				width: 90%;
+				font-size: 1.6rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
+	.head-title {
+		font-size: 2.5rem;
+	}
+
 	//hero-banner
 	.hero-banner {
 		height: 55vh;
@@ -307,10 +378,6 @@ body {
 	.aboutus {
 		padding: 0em 2em;
 
-		.head-title {
-			font-size: 2.5rem;
-		}
-
 		.images-section {
 			margin: 1.5em 0em;
 
@@ -319,6 +386,21 @@ body {
 					margin-bottom: 1.5em;
 					width: 80%;
 				}
+			}
+		}
+	}
+
+	//calculators
+	.calculators {
+		.about-calculator {
+			margin-bottom: 1.5em;
+			line-height: 2.2em;
+		}
+
+		.links-box {
+			.link {
+				width: 85%;
+				font-size: 1.7rem;
 			}
 		}
 	}
@@ -399,6 +481,19 @@ body {
 			}
 		}
 	}
+
+	//calculators
+	.calculators {
+		.about-calculator {
+			margin-bottom: 2em;
+		}
+
+		.links-box {
+			.link {
+				width: 75%;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -407,5 +502,14 @@ body {
 		height: 55vh;
 		background-size: cover;
 		background-position-y: 10%;
+	}
+
+	//calculators
+	.calculators {
+		.links-box {
+			.link {
+				width: 65%;
+			}
+		}
 	}
 }
