@@ -187,6 +187,10 @@ body {
 			margin-bottom: 1.2em;
 			font-size: 1.5rem;
 			line-height: 1.7em;
+
+			.bold {
+				font-weight: bold;
+			}
 		}
 	}
 
@@ -265,10 +269,6 @@ body {
 			.para-text {
 				font-size: 1.6rem;
 				line-height: 2em;
-
-				.bold {
-					font-weight: bold;
-				}
 			}
 		}
 
@@ -379,26 +379,26 @@ body {
 		}
 	}
 
-		//aboutus
-		.aboutus {
-			padding: 0em 3em;
-	
-			.head-title {
-				font-size: 2.7rem;
-			}
-	
-			.images-section {
-				flex-direction: row;
-				margin: 2em 0em;
-	
-				.img-box {
-					.img {
-						margin: 0em 2em;
-						width: 95%;
-					}
+	//aboutus
+	.aboutus {
+		padding: 0em 3em;
+
+		.head-title {
+			font-size: 2.7rem;
+		}
+
+		.images-section {
+			flex-direction: row;
+			margin: 2em 0em;
+
+			.img-box {
+				.img {
+					margin: 0em 2em;
+					width: 95%;
 				}
 			}
 		}
+	}
 }
 
 @media (min-width: 1200px) {
