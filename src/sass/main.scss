@@ -317,11 +317,26 @@ body {
 					display: flex;
 					justify-content: space-evenly;
 
+					.fa-instagram:hover {
+						color: c.$instagram;
+					}
+					.fa-twitter:hover {
+						color: c.$twitter;
+					}
+					.fa-youtube:hover {
+						color: c.$youtube;
+					}
+
 					.link {
 						margin-bottom: 0.5em;
 						font-size: 2.8rem;
 						text-decoration: none;
 						cursor: pointer;
+						transition: color 0.3s, transform 0.3s;
+
+						&:hover {
+							transform: scale(0.95);
+						}
 					}
 				}
 
@@ -477,6 +492,56 @@ body {
 		}
 	}
 
+	//contact
+	.contact {
+		margin-top: 4em;
+		padding: 0em 2em;
+
+		.sub-title {
+			margin-bottom: 2.5em;
+			font-size: 1.7rem;
+		}
+
+		.contact-box {
+			.contact-dates {
+				.data-container {
+					margin: 2em 0em;
+					padding: 4em 3em;
+
+					.title {
+						margin-bottom: 2em;
+						padding-bottom: 0.3em;
+						font-size: 1.9rem;
+					}
+
+					.social-media {
+						.link {
+							margin-bottom: 0.7em;
+							font-size: 3.2rem;
+						}
+					}
+
+					.other-data {
+						.phone-number,
+						.email-adres {
+							margin: 0.8em;
+						}
+					}
+				}
+			}
+
+			.adress {
+				margin-top: 3.5em;
+				margin-bottom: 1.5em;
+				font-size: 1.7rem;
+			}
+
+			.map {
+				margin-bottom: 2.5em;
+			}
+		}
+	}
+
 	// footer
 	.footer {
 		margin-top: 1.5em;
@@ -534,6 +599,41 @@ body {
 			.link {
 				width: 85%;
 				font-size: 1.7rem;
+			}
+		}
+	}
+
+	//contact
+	.contact {
+		.sub-title {
+			font-size: 1.9rem;
+		}
+
+		.contact-box {
+			.contact-dates {
+				.data-container {
+					padding: 4em;
+
+					.title {
+						padding-bottom: 0.4em;
+						font-size: 2rem;
+					}
+
+					.social-media {
+						.link {
+							font-size: 3.5rem;
+						}
+					}
+				}
+			}
+
+			.adress {
+				margin-top: 4em;
+				font-size: 1.9rem;
+			}
+
+			.map {
+				margin-bottom: 4em;
 			}
 		}
 	}
@@ -646,6 +746,47 @@ body {
 			}
 		}
 	}
+
+	//contact
+	.contact {
+		.contact-box {
+			background-color: c.$black;
+			border-radius: 0.8em;
+			margin: 1em 0em;
+			padding: 2em;
+
+			.contact-dates {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+
+				.data-container {
+					width: 50%;
+
+					.title {
+						margin-bottom: 1.5em;
+						font-size: 2.3rem;
+					}
+				}
+			}
+
+			.map-box {
+				width: 50%;
+
+				.adress {
+					margin-top: 0em;
+					margin-bottom: 1em;
+					color: c.$white;
+				}
+
+				.map {
+					width: 100%;
+					margin-bottom: 0em;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -661,6 +802,19 @@ body {
 		.links-box {
 			.link {
 				width: 65%;
+			}
+		}
+	}
+
+	//contact
+	.contact {
+		.contact-box {
+			padding: 3em;
+
+			.map-box {
+				.adress {
+					margin-bottom: 1.5em;
+				}
 			}
 		}
 	}
