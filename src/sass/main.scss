@@ -387,15 +387,15 @@ body {
 	flex-direction: column;
 	margin-top: 1em;
 	background-color: c.$navy;
-
+	
 	&__top {
 		display: none;
 	}
-
+	
 	.line {
 		display: none;
 	}
-
+	
 	&__bottom {
 		display: flex;
 		justify-content: center;
@@ -644,9 +644,57 @@ body {
 
 		&__top {
 			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
 			padding: 2.5em 3em;
 			color: c.$white;
 			font-size: 1.5rem;
+
+			.company-logo {
+				a {
+					color: c.$white;
+					text-decoration: none;
+					font-size: 2.3rem;
+					transition: color 0.3s;
+
+					i {
+						font-size: 3.2rem;
+					}
+
+					&:hover {
+						color: c.$very-light-cyan;
+					}
+				}
+			}
+
+			.links-box {
+				display: flex;
+				flex-direction: row;
+
+				.link {
+					display: flex;
+					flex-direction: column;
+					margin-right: 2.5em;
+
+					&-head {
+						margin-bottom: 0.5em;
+						font-size: 2rem;
+					}
+
+					&-item {
+						margin-bottom: 1em;
+						text-decoration: none;
+						color: c.$white;
+						font-size: 1.5rem;
+						transition: color 0.3s;
+
+						&:hover {
+							color: c.$light-cyan;
+						}
+					}
+				}
+			}
 		}
 
 		.line {
@@ -783,6 +831,39 @@ body {
 				.map {
 					width: 100%;
 					margin-bottom: 0em;
+				}
+			}
+		}
+	}
+
+	// footer
+	.footer {
+		margin-top: 5.5em;
+
+		&__top {
+			padding: 3.5em;
+
+			.company-logo {
+				a {
+					font-size: 2.7rem;
+
+					i {
+						font-size: 3.7rem;
+					}
+				}
+			}
+
+			.links-box {
+				.link {
+					margin-right: 3em;
+
+					&-head {
+						font-size: 2.2rem;
+					}
+
+					&-item {
+						font-size: 1.5rem;
+					}
 				}
 			}
 		}
