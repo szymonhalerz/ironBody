@@ -422,12 +422,34 @@ body {
 		color: c.$very-light-navy;
 	}
 
-	.container-one {
+	.label {
+		display: inline-block;
+		text-align: center;
+		padding: 1em;
+		width: 30%;
+		background-color: c.$myblue;
+		color: c.$white;
+		font-size: 1.5rem;
+	}
+	
+	.label-two {
+		display: inline-block;
+		margin-bottom: 0.5em;
+		text-align: center;
+		padding: 1em;
+		background-color: c.$myblue;
+		color: c.$white;
+		font-size: 1.5rem;
+	}
+
+	.main-container {
 		display: flex;
 		justify-content: start;
 		align-items: center;
 		margin-bottom: 1em;
+	}
 
+	.container-one {
 		.boxes {
 			display: flex;
 			flex-direction: column;
@@ -440,44 +462,18 @@ body {
 				margin-bottom: 0.3em;
 			}
 		}
-
-		label {
-			display: inline-block;
-			padding: 1em 2em;
-			width: 30%;
-			background-color: c.$navy;
-			color: c.$white;
-			text-align: center;
-			font-size: 1.5rem;
-		}
 	}
 
 	.container-two {
-		display: flex;
-		justify-content: start;
-		align-items: center;
-		margin-bottom: 1em;
-		
-
-		label {
-			display: inline-block;
-			text-align: center;
-			padding: 1em;
-			width: 30%;
-			background-color: c.$navy;
-			color: c.$white;
-			font-size: 1.5rem;
-		}
-
 		input {
-			padding: 1.2em;
+			padding: 1.1em;
 			width: 70%;
-			border: 1px solid c.$black;
+			border: 2px solid c.$myblue;
 			font-size: 1.3rem;
 
 			&:focus {
 				outline: none;
-				background-color: c.$blues;
+				background-color: c.$myblue-light;
 			}
 		}
 	}
@@ -486,16 +482,6 @@ body {
 		margin-bottom: 1em;
 		display: flex;
 		flex-direction: column;
-
-		label {
-			display: inline-block;
-			margin-bottom: 0.5em;
-			text-align: center;
-			padding: 1em;
-			background-color: c.$navy;
-			color: c.$white;
-			font-size: 1.5rem;
-		}
 
 		select {
 			margin-bottom: 1em;
@@ -512,6 +498,35 @@ body {
 			p {
 				margin-bottom: 0.5em;
 				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.btn-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2em;
+
+		.calc-btn {
+			margin-top: 1em;
+			padding: 0.8em 4em;
+			font-size: 1.6rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: orange;
+			border: none;
+			border-radius: 0.8em;
+			-webkit-box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 1);
+			-moz-box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 0.834);
+			box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 1);
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+
+			&:hover {
+				background-color: c.$black;
+				color: c.$white;
+				border-radius: 0em;
 			}
 		}
 	}
@@ -584,21 +599,46 @@ body {
 		}
 	}
 
-	//calculators
-	.calculators {
+	// calories-calculator
+	.calories-calculator {
 		padding: 0em 2em;
 
-		.about-calculator {
-			margin-bottom: 1.3em;
-			font-size: 1.6rem;
-			line-height: 2em;
+		.info-text {
+			margin-bottom: 3em;
+			font-size: 1.7rem;
 		}
 
-		.links-box {
-			.link {
-				padding: 1.2em 1.5em;
-				width: 90%;
-				font-size: 1.6rem;
+		.label {
+			font-size: 1.6rem;
+		}
+
+		.label-two {
+			font-size: 1.6rem;
+		}
+
+		.container-two {
+			input {
+				padding: 1em;
+				font-size: 1.5rem;
+			}
+		}
+
+		.container {
+			select {
+				font-size: 1.5rem;
+			}
+
+			.activity-level-info {
+				p {
+					margin-bottom: 0.7em;
+				}
+			}
+		}
+
+		.btn-section {
+			.calc-btn {
+				padding: 1em 5em;
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -815,6 +855,36 @@ body {
 			background-color: c.$white;
 		}
 	}
+
+	// calories-calculator
+	.calories-calculator {
+		padding: 0em 2.5em;
+
+		.info-text {
+			margin-bottom: 3.5em;
+			font-size: 1.9rem;
+		}
+
+		.container {
+			select {
+				padding: 1em;
+				font-size: 1.7rem;
+			}
+
+			.activity-level-info {
+				p {
+					font-size: 1.4rem;
+					margin-bottom: 1em;
+				}
+			}
+		}
+
+		.btn-section {
+			.calc-btn {
+				font-size: 1.7rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -1007,6 +1077,25 @@ body {
 				.adress {
 					margin-bottom: 1.5em;
 				}
+			}
+		}
+	}
+
+	// calories-calculator
+	.calories-calculator {
+		.container {
+			.activity-level-info {
+				p {
+					font-size: 1.5rem;
+					margin-bottom: 1.2em;
+				}
+			}
+		}
+
+		.btn-section {
+			.calc-btn {
+				padding: 1em 7em;
+				font-size: 1.9rem;
 			}
 		}
 	}

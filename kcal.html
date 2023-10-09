@@ -64,15 +64,15 @@
 					<p class="info-text">Podaj nam swoje dane</p>
 
 					<div class="calculator">
-						<div class="container-one">
-							<label for="gender">Płeć</label>
+						<div class="main-container container-one">
+							<label class="label" ="gender">Płeć</label>
 
 							<div class="boxes">
 								<div class="box">
 									<input type="radio" />
 									<span>Kobieta</span>
 								</div>
-	
+
 								<div class="box">
 									<input type="radio" />
 									<span>Mężczyzna</span>
@@ -80,23 +80,23 @@
 							</div>
 						</div>
 
-						<div class="container-two">
-							<label for="weight">Waga</label>
+						<div class="main-container container-two">
+							<label class="label" for="weight">Waga</label>
 							<input type="number" id="weight" placeholder="Podaj swoją wagę w kg" />
 						</div>
 
-						<div class="container-two">
-							<label for="height">Wzrost</label>
+						<div class="main-container container-two">
+							<label class="label" for="height">Wzrost</label>
 							<input type="number" id="height" placeholder="Podaj swój wzrost w cm" />
 						</div>
 
-						<div class="container-two">
-							<label for="age">Wiek</label>
+						<div class="main-container container-two">
+							<label class="label" for="age">Wiek</label>
 							<input type="number" id="age" placeholder="Podaj swój wiek" />
 						</div>
 
 						<div class="container">
-							<label for="activity-level">Aktywność fizyczna</label>
+							<label class="label-two" for="activity-level">Aktywność fizyczna</label>
 							<select id="activity-level">
 								<option value="1">Siedzący tryb życia</option>
 								<option value="2">Umiarkowana aktywność fizyczna</option>
@@ -131,12 +131,16 @@
 							</div>
 						</div>
 						<div class="container">
-							<label for="diet-goal">Cel diety</label>
+							<label class="label-two" for="diet-goal">Cel diety</label>
 							<select id="diet-goal">
 								<option value="1">Redukcja</option>
 								<option value="2">Utrzymanie</option>
 								<option value="3">Masa</option>
 							</select>
+						</div>
+
+						<div class="btn-section">
+							<button class="calc-btn">Oblicz</button>
 						</div>
 					</div>
 				</div>
