@@ -432,7 +432,7 @@ body {
 		color: c.$white;
 		font-size: 1.5rem;
 	}
-	
+
 	.label-two {
 		display: inline-block;
 		margin-bottom: 0.5em;
@@ -488,6 +488,7 @@ body {
 			margin-bottom: 1em;
 			padding: 1.2em;
 			border: 1px solid c.$black;
+			background: none;
 			font-size: 1.3rem;
 
 			&:focus {
