@@ -415,7 +415,7 @@ body {
 	padding: 0em 1em;
 
 	.info-text {
-		margin-bottom: 2em;
+		margin-bottom: 3em;
 		text-align: center;
 		font-size: 1.5rem;
 		font-weight: bold;
@@ -469,6 +469,7 @@ body {
 		input {
 			padding: 1.1em;
 			width: 70%;
+			text-align: center;
 			border: 2px solid c.$myblue;
 			font-size: 1.3rem;
 
@@ -490,6 +491,7 @@ body {
 			border: 1px solid c.$black;
 			background: none;
 			font-size: 1.3rem;
+			text-align: center;
 
 			&:focus {
 				outline: none;
@@ -506,29 +508,62 @@ body {
 
 	.btn-section {
 		display: flex;
-		justify-content: center;
+		justify-content: end;
 		align-items: center;
 		margin-bottom: 2em;
 
 		.calc-btn {
-			margin-top: 1em;
-			padding: 0.8em 4em;
+			padding: 1em 4em;
 			font-size: 1.6rem;
-			font-weight: bold;
 			text-transform: uppercase;
-			background-color: orange;
+			background-color: c.$black;
+			color: c.$white;
 			border: none;
-			border-radius: 0.8em;
-			-webkit-box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 1);
-			-moz-box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 0.834);
-			box-shadow: 0px 0px 30px -1px rgba(29, 29, 29, 1);
+			-webkit-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			-moz-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			transition: border-radius 0.3s;
 			cursor: pointer;
-			transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
 
 			&:hover {
-				background-color: c.$black;
-				color: c.$white;
-				border-radius: 0em;
+				border-radius: 3em;
+			}
+		}
+	}
+
+	.result {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 3em 1em;
+		padding: 2em 1em;
+		-webkit-box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
+		-moz-box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
+		box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
+
+		.text {
+			margin-bottom: 2em;
+			.kcal {
+				font-weight: bold;
+			}
+		}
+
+		.close {
+			padding: 1em 3em;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			border: none;
+			background-color: c.$black;
+			color: c.$white;
+			-webkit-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			-moz-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			transition: border-radius 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				border-radius: 3em;
 			}
 		}
 	}
@@ -883,6 +918,18 @@ body {
 
 		.btn-section {
 			.calc-btn {
+				font-size: 1.7rem;
+			}
+		}
+
+		.result {
+			margin: 5em auto;
+			padding: 3em 1.5em;
+			width: 100%;
+			max-width: 700px;
+
+			.text {
+				margin-bottom: 2em;
 				font-size: 1.7rem;
 			}
 		}
