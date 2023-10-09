@@ -2,6 +2,8 @@ const burgerBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav-mobile')
 const footerYear = document.querySelector('.footer__year')
 
+
+
 const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
 	navMobile.classList.toggle('nav-mobile--active')

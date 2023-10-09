@@ -100,6 +100,10 @@ body {
 				display: none;
 			}
 
+			// .active {
+			// 	color: red;
+			// }
+
 			&-mobile {
 				position: fixed;
 				display: flex;
@@ -387,15 +391,15 @@ body {
 	flex-direction: column;
 	margin-top: 1em;
 	background-color: c.$navy;
-	
+
 	&__top {
 		display: none;
 	}
-	
+
 	.line {
 		display: none;
 	}
-	
+
 	&__bottom {
 		display: flex;
 		justify-content: center;
@@ -403,6 +407,113 @@ body {
 		padding: 1em;
 		color: c.$white;
 		font-size: 1.4rem;
+	}
+}
+
+// calories-calculator
+.calories-calculator {
+	padding: 0em 1em;
+
+	.info-text {
+		margin-bottom: 2em;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: c.$very-light-navy;
+	}
+
+	.container-one {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		margin-bottom: 1em;
+
+		.boxes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			width: 70%;
+
+			.box {
+				margin-left: 1em;
+				margin-bottom: 0.3em;
+			}
+		}
+
+		label {
+			display: inline-block;
+			padding: 1em 2em;
+			width: 30%;
+			background-color: c.$navy;
+			color: c.$white;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+
+	.container-two {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		margin-bottom: 1em;
+		
+
+		label {
+			display: inline-block;
+			text-align: center;
+			padding: 1em;
+			width: 30%;
+			background-color: c.$navy;
+			color: c.$white;
+			font-size: 1.5rem;
+		}
+
+		input {
+			padding: 1.2em;
+			width: 70%;
+			border: 1px solid c.$black;
+			font-size: 1.3rem;
+
+			&:focus {
+				outline: none;
+				background-color: c.$blues;
+			}
+		}
+	}
+
+	.container {
+		margin-bottom: 1em;
+		display: flex;
+		flex-direction: column;
+
+		label {
+			display: inline-block;
+			margin-bottom: 0.5em;
+			text-align: center;
+			padding: 1em;
+			background-color: c.$navy;
+			color: c.$white;
+			font-size: 1.5rem;
+		}
+
+		select {
+			margin-bottom: 1em;
+			padding: 1.2em;
+			border: 1px solid c.$black;
+			font-size: 1.3rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.activity-level-info {
+			p {
+				margin-bottom: 0.5em;
+				font-size: 1.4rem;
+			}
+		}
 	}
 }
 

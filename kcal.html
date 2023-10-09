@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IronBody</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/20e2212097.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dist/css/hamburger.min.css" />
+		<link rel="stylesheet" href="dist/css/main.min.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="wrapper">
+				<div class="navbar">
+					<div class="brand-logo">
+						<a href="index.html"><i class="fa-solid fa-dumbbell"></i> ironBody</a>
+					</div>
+
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+
+					<nav class="nav nav-desktop">
+						<a class="nav__link active" href="#home">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#calculators">Kalkulatory</a>
+						<a class="nav__link" href="blog.html">Blog</a>
+						<a class="nav__link" href="#contact">Kontakt</a>
+					</nav>
+
+					<nav class="nav nav-mobile">
+						<a class="nav__link" href="index.html">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#calculators">Kalkulatory</a>
+						<a class="nav__link" href="blog.html">Blog</a>
+						<a class="nav__link" href="#contact">Kontakt</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div class="hero-banner section" id="home">
+			<div class="hero-img">
+				<div class="hero__shadow"></div>
+				<div class="wrapper">
+					<div class="hero__text">
+						<p>IronBody</p>
+						<h1>Z nami staniesz się greckim bogiem!</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main class="main">
+			<div class="wrapper">
+				<div class="calories-calculator">
+					<h2 class="head-title">Kalkulator zapotrzebowania kalorycznego</h2>
+
+					<p class="info-text">Podaj nam swoje dane</p>
+
+					<div class="calculator">
+						<div class="container-one">
+							<label for="gender">Płeć</label>
+
+							<div class="boxes">
+								<div class="box">
+									<input type="radio" />
+									<span>Kobieta</span>
+								</div>
+	
+								<div class="box">
+									<input type="radio" />
+									<span>Mężczyzna</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="container-two">
+							<label for="weight">Waga</label>
+							<input type="number" id="weight" placeholder="Podaj swoją wagę w kg" />
+						</div>
+
+						<div class="container-two">
+							<label for="height">Wzrost</label>
+							<input type="number" id="height" placeholder="Podaj swój wzrost w cm" />
+						</div>
+
+						<div class="container-two">
+							<label for="age">Wiek</label>
+							<input type="number" id="age" placeholder="Podaj swój wiek" />
+						</div>
+
+						<div class="container">
+							<label for="activity-level">Aktywność fizyczna</label>
+							<select id="activity-level">
+								<option value="1">Siedzący tryb życia</option>
+								<option value="2">Umiarkowana aktywność fizyczna</option>
+								<option value="3">Średnia aktywność fizyczna</option>
+								<option value="4">Wysoka aktywność fizyczna</option>
+								<option value="5">Bardzo wysoka aktywność fizyczna</option>
+							</select>
+
+							<div class="activity-level-info">
+								<p>
+									<span class="bold"> Siedzący tryb życia: </span> praca siedząca/uczeń, brak regularnych ćwiczeń ,
+									niska aktywność fizyczna w ciągu dnia (ok. 5 tys. kroków)
+								</p>
+								<p>
+									<span class="bold">Umiarkowana aktywność fizyczna:</span> praca siedząca/uczeń treningi (np.na siłowni
+									lub w domu) 2-4x w tygodniu, umiarkowana aktywność fizyczna w ciągu dnia (ok.5-9 tysięcy kroków
+									dziennie) ten współczynnik będzie właściwy dla większości osób
+								</p>
+								<p>
+									<span class="bold"> Średnia aktywność fizyczna: </span> praca fizyczna lub 3-6 treningów w tygodniu o
+									wysokiej intensywności ( bieganie, jazda na rowerze, trening siłowy), codzienna aktywność na poziomie
+									ponad 10 tys. kroków
+								</p>
+								<p>
+									<span class="bold"> Wysoka aktywność fizyczna: </span> praca fizyczna lub codzienne treningi o
+									wysokiej intensywności, dzienna aktywność na poziomie ponad 15 tys. kroków
+								</p>
+								<p>
+									<span class="bold"> Bardzo wysoka aktywność fizyczna: </span> wymagająca praca fizyczna, codzienne
+									treningi o wysokiej intensywności, ponad 20 tys. kroków dziennie
+								</p>
+							</div>
+						</div>
+						<div class="container">
+							<label for="diet-goal">Cel diety</label>
+							<select id="diet-goal">
+								<option value="1">Redukcja</option>
+								<option value="2">Utrzymanie</option>
+								<option value="3">Masa</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__top">
+					<div class="company-logo">
+						<a href="index.html"><i class="fa-solid fa-dumbbell"></i> ironBody</a>
+					</div>
+					<div class="links-box">
+						<div class="link">
+							<h3 class="link-head">Firma</h3>
+							<a class="link-item" href="#">O nas</a>
+							<a class="link-item" href="#">Kariera</a>
+							<a class="link-item" href="#">Kontakt</a>
+						</div>
+						<div class="link">
+							<h3 class="link-head">Kalkulatory</h3>
+							<a class="link-item" href="#">BMI</a>
+							<a class="link-item" href="#">Podaż kalorii</a>
+							<a class="link-item" href="#">Ilość spożywanej wody</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="wrapper">
+				<div class="footer__bottom">
+					<p class="footer__bottom-text">&copy;<span class="footer__year">0000</span> Forest Group Company Ltd.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="dist/js/main.min.js"></script>
+	</body>
+</html>
