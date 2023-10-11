@@ -490,7 +490,7 @@ body {
 			padding: 1.2em;
 			border: 1px solid c.$black;
 			background: none;
-			font-size: 1.3rem;
+			font-size: 1.4rem;
 			text-align: center;
 
 			&:focus {
@@ -531,8 +531,26 @@ body {
 		}
 	}
 
+	.error-section {
+		display: none;
+		margin: 2.5em auto;
+		padding: 2em 1em;
+		width: 100%;
+		max-width: 320px;
+		-webkit-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+		-moz-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+		box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+
+		.error {
+			text-align: center;
+			font-size: 1.6rem;
+			font-weight: bold;
+			color: rgb(230, 3, 3);
+		}
+	}
+
 	.result {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -564,6 +582,100 @@ body {
 
 			&:hover {
 				border-radius: 3em;
+			}
+		}
+	}
+}
+
+//BLOG
+.blog {
+	padding: 0em 1em;
+
+	.articles {
+		.article {
+			margin-bottom: 5em;
+			padding: 1em;
+			border-radius: 0.5em;
+			-webkit-box-shadow: 0px 0px 22px -2px rgba(134, 134, 134, 1);
+			-moz-box-shadow: 0px 0px 22px -2px rgba(134, 134, 134, 1);
+			box-shadow: 0px 0px 22px -2px rgba(134, 134, 134, 1);
+
+			.hero-img {
+				position: relative;
+				margin-bottom: 1.2em;
+				padding: 9em 0em;
+				background-size: cover;
+				background-position: center;
+				border-radius: 0.5em;
+				overflow: hidden;
+				z-index: -1;
+
+				.hero__text {
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding: 0em 1em;
+					color: c.$white;
+					z-index: 5;
+
+					.article-title {
+						font-size: 1.9rem;
+						line-height: 2.3rem;
+					}
+				}
+
+				.hero-shadow {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #0000009e;
+					z-index: 0;
+				}
+			}
+
+			.article-text {
+				h3 {
+					margin-bottom: 0.2em;
+				}
+
+				p {
+					margin-bottom: 1.5em;
+					font-size: 1.5rem;
+					line-height: 1.9em;
+
+					.kcal-link {
+						text-decoration: none;
+						font-weight: bold;
+						color: c.$navy;
+					}
+				}
+			}
+		}
+
+		.article-one {
+			.hero-main-one {
+				background-image: url('../../dist/img/hero-food.jpg');
+			}
+
+			.hero-second-one {
+				background-image: url('../../dist/img/vegetable-skewer-3317060_640.jpg');
+			}
+		}
+
+		.article-two {
+			.hero-main-two {
+				background-image: url('../../dist/img/andrew-ren-BhspCN17HT8-unsplash.jpg');
+			}
+
+			.hero-second-two {
+				background-image: url('../../dist/img/giorgio-trovato-Hj4QiV9MTi8-unsplash.jpg');
 			}
 		}
 	}
@@ -736,6 +848,48 @@ body {
 
 		&__bottom {
 			padding: 2em;
+		}
+	}
+
+	//BLOG
+	.blog {
+		padding: 0em 2em;
+
+		.head-title {
+			font-size: 2.5rem;
+		}
+
+		.articles {
+			.article {
+				padding: 1em 1.5em;
+
+				.hero-img {
+					margin-bottom: 1.5em;
+					padding: 10em 0em;
+
+					.hero__text {
+						padding: 0em 2em;
+
+						.article-title {
+							font-size: 2.3rem;
+							line-height: 2.7rem;
+						}
+					}
+				}
+
+				.article-text {
+					h3 {
+						margin-bottom: 0.5em;
+						font-size: 1.9rem;
+					}
+
+					p {
+						margin-bottom: 1.8em;
+						font-size: 1.6rem;
+						line-height: 2em;
+					}
+				}
+			}
 		}
 	}
 }
@@ -934,6 +1088,45 @@ body {
 			}
 		}
 	}
+
+	//BLOG
+	.blog {
+		padding: 0em 2em;
+
+		.head-title {
+			font-size: 2.8rem;
+		}
+
+		.articles {
+			.article {
+				padding: 1em 2em;
+
+				.hero-img {
+					margin-bottom: 1.8em;
+
+					.hero__text {
+						padding: 0em 2.5em;
+
+						.article-title {
+							font-size: 2.5rem;
+							line-height: 2.8rem;
+						}
+					}
+				}
+
+				.article-text {
+					h3 {
+						font-size: 2.1rem;
+					}
+
+					p {
+						margin-bottom: 2em;
+						line-height: 2.1em;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -1095,6 +1288,60 @@ body {
 						font-size: 1.5rem;
 					}
 				}
+			}
+		}
+	}
+
+	//BLOG
+	.blog {
+		padding: 0em 4em;
+
+		.head-title {
+			font-size: 3.2rem;
+		}
+
+		.articles {
+			.article {
+				padding: 3em 3em;
+
+				.hero-img {
+					margin-bottom: 2em;
+
+					.hero__text {
+						padding: 0em 3em;
+
+						.article-title {
+							font-size: 2.7rem;
+							line-height: 3rem;
+						}
+					}
+				}
+
+				.article-text {
+					p {
+						margin-bottom: 2.2em;
+					}
+				}
+			}
+		}
+
+		.article-one {
+			.hero-main-one {
+				background-image: url('../../dist/img/hero-food.jpg');
+			}
+
+			.hero-second-one {
+				background-image: url('../../dist/img/vegetable-skewer-3317060_1920.jpg');
+			}
+		}
+
+		.article-two {
+			.hero-main-two {
+				background-image: url('../../dist/img/andrew-ren-BhspCN17HT8-unsplash\ \(2\).jpg');
+			}
+
+			.hero-second-two {
+				background-image: url('../../dist/img/giorgio-trovato-Hj4QiV9MTi8-unsplash\ \(1\).jpg');
 			}
 		}
 	}

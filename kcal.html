@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>IronBody</title>
+		<title>Kalkulator zapotrzebowania kalorycznego | IronBody</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -26,11 +26,11 @@
 					</button>
 
 					<nav class="nav nav-desktop">
-						<a class="nav__link active" href="#home">Home</a>
+						<a class="nav__link active" href="index.html">Home</a>
 						<a class="nav__link" href="#aboutus">O nas</a>
-						<a class="nav__link" href="#calculators">Kalkulatory</a>
+						<a class="nav__link" href="index.html#calculators">Kalkulatory</a>
 						<a class="nav__link" href="blog.html">Blog</a>
-						<a class="nav__link" href="#contact">Kontakt</a>
+						<a class="nav__link" href="index.html#contact">Kontakt</a>
 					</nav>
 
 					<nav class="nav nav-mobile">
@@ -65,17 +65,16 @@
 
 					<div class="calculator">
 						<div class="main-container container-one">
-							<label class="label" ="gender">Płeć</label>
-
+							<label class="label">Płeć</label>
 							<div class="boxes">
 								<div class="box">
-									<input type="radio" />
-									<span>Kobieta</span>
+									<input type="radio" id="woman" />
+									<label for="woman">Kobieta</label>
 								</div>
 
 								<div class="box">
-									<input type="radio" />
-									<span>Mężczyzna</span>
+									<input type="radio" id="man" />
+									<label for="man">Mężczyzna</label>
 								</div>
 							</div>
 						</div>
@@ -98,11 +97,12 @@
 						<div class="container">
 							<label class="label-two" for="activity-level">Aktywność fizyczna</label>
 							<select id="activity-level">
-								<option value="1">Siedzący tryb życia</option>
-								<option value="2">Umiarkowana aktywność fizyczna</option>
-								<option value="3">Średnia aktywność fizyczna</option>
-								<option value="4">Wysoka aktywność fizyczna</option>
-								<option value="5">Bardzo wysoka aktywność fizyczna</option>
+								<option value="" selected>Wybierz poziom aktywności</option>
+								<option value="1.4">Siedzący tryb życia</option>
+								<option value="1.6">Umiarkowana aktywność fizyczna</option>
+								<option value="1.7">Średnia aktywność fizyczna</option>
+								<option value="1.9">Wysoka aktywność fizyczna</option>
+								<option value="2.1">Bardzo wysoka aktywność fizyczna</option>
 							</select>
 
 							<div class="activity-level-info">
@@ -133,14 +133,19 @@
 						<div class="container">
 							<label class="label-two" for="diet-goal">Cel diety</label>
 							<select id="diet-goal">
-								<option value="1">Redukcja</option>
-								<option value="2">Utrzymanie</option>
-								<option value="3">Masa</option>
+								<option value="" selected>Wybierz cel diety</option>
+								<option value="0.88">Redukcja</option>
+								<option value="1">Utrzymanie</option>
+								<option value="1.12">Masa</option>
 							</select>
 						</div>
 
 						<div class="btn-section">
 							<button class="calc-btn">Oblicz</button>
+						</div>
+
+						<div class="error-section">
+							<p class="error">Uzupełnij wszystkie pola!</p>
 						</div>
 
 						<div class="result">
