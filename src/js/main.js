@@ -19,6 +19,9 @@ let kcal = document.querySelector('.kcal')
 const errorBox = document.querySelector('.error-section')
 const errorText = document.querySelector('.error')
 
+const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
+const scrollSpySections = document.querySelectorAll('.section')
+
 //----------------------------------------------------------------
 
 const handleNav = () => {
@@ -53,7 +56,14 @@ const clearError = () => {
 }
 
 const checkCalc = () => {
-	if(weight.value !== '' && height.value !== '' && age.value !== '' && (womanRadio.checked === true || manRadio.checked === true) && activity.options[activity.selectedIndex].value !== '' && dietGoal.options[dietGoal.selectedIndex].value !== '') {
+	if (
+		weight.value !== '' &&
+		height.value !== '' &&
+		age.value !== '' &&
+		(womanRadio.checked === true || manRadio.checked === true) &&
+		activity.options[activity.selectedIndex].value !== '' &&
+		dietGoal.options[dietGoal.selectedIndex].value !== ''
+	) {
 		clearError()
 		kcalCalc()
 	} else {
@@ -91,7 +101,31 @@ const closeResultPopup = () => {
 
 //----------------------------------------------------------------
 
+const handleScrollSpy = () => {
+	if (document.body.classList.contains('main-page')) {
+		const sections = []
+
+		scrollSpySections.forEach(section => {
+			// console.log(window.scrollY);
+			// console.log(section.offsetTop);
+			// console.log(section.offsetHeight);
+
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 130) {
+				sections.push(section)
+
+				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+
+				menuItems.forEach(item => item.classList.remove('active'))
+				activeSection.classList.add('active')
+			}
+		})
+	}
+}
+
+//----------------------------------------------------------------
+
 burgerBtn.addEventListener('click', handleNav)
 handleCurrentYear()
-calcBtn.addEventListener('click', checkCalc)
-closeBtn.addEventListener('click', closeResultPopup)
+// calcBtn.addEventListener('click', checkCalc)
+// closeBtn.addEventListener('click', closeResultPopup)
+window.addEventListener('scroll', handleScrollSpy)
