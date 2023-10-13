@@ -124,8 +124,14 @@ const handleScrollSpy = () => {
 
 //----------------------------------------------------------------
 
+const checkSite = () => {
+	if (document.body.classList.contains('kcal-calc')) {
+		closeBtn.addEventListener('click', closeResultPopup)
+		calcBtn.addEventListener('click', checkCalc)
+	}
+}
+
 burgerBtn.addEventListener('click', handleNav)
 handleCurrentYear()
-// calcBtn.addEventListener('click', checkCalc)
-// closeBtn.addEventListener('click', closeResultPopup)
+checkSite()
 window.addEventListener('scroll', handleScrollSpy)

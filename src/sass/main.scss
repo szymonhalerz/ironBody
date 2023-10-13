@@ -259,8 +259,6 @@ body {
 			text-decoration: none;
 			background-color: c.$blue;
 			color: c.$white;
-			border-top-right-radius: 1.3em;
-			border-bottom-left-radius: 1.3em;
 			cursor: pointer;
 			transition: background-color 0.3s, border-radius 0.3s, transform 0.3s;
 
@@ -551,33 +549,38 @@ body {
 	}
 
 	.result {
+		position: fixed;
 		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 3em 1em;
-		padding: 2em 1em;
-		-webkit-box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
-		-moz-box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
-		box-shadow: 6px 3px 22px 0px rgba(66, 68, 90, 1);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 4em 3em;
+		border-radius: 0.8em;
+		background-color: c.$black;
+		-webkit-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
+		-moz-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
+		box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
 
 		.text {
 			margin-bottom: 2em;
+			font-size: 1.6rem;
+			color: c.$white;
+
 			.kcal {
 				font-weight: bold;
 			}
 		}
 
 		.close {
-			padding: 1em 3em;
+			padding: 0.8em 3em;
 			font-size: 1.5rem;
 			text-transform: uppercase;
 			border: none;
-			background-color: c.$black;
-			color: c.$white;
-			-webkit-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
-			-moz-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
-			box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
+			background-color: c.$white;
+			color: c.$black;
 			transition: border-radius 0.3s;
 			cursor: pointer;
 
@@ -884,6 +887,22 @@ body {
 		}
 	}
 
+	//CALCULATOR
+	.calories-calculator {
+		.result {
+			padding: 4em 8em;
+
+			.text {
+				font-size: 1.7rem;
+			}
+	
+			.close {
+				padding: 0.8em 5em;
+				font-size: 1.7rem;
+			}
+		}
+	}
+
 	//BLOG
 	.blog {
 		padding: 0em 2em;
@@ -944,6 +963,7 @@ body {
 			}
 		}
 	}
+	
 }
 
 @media (min-width: 768px) {
@@ -1130,13 +1150,13 @@ body {
 
 		.result {
 			margin: 5em auto;
-			padding: 3em 1.5em;
+			padding: 4em 1em;
 			width: 100%;
 			max-width: 700px;
 
 			.text {
-				margin-bottom: 2em;
-				font-size: 1.7rem;
+				margin-bottom: 3em;
+				font-size: 1.8rem;
 			}
 		}
 	}
