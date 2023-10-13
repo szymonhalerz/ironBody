@@ -18,8 +18,9 @@ let kcal = document.querySelector('.kcal')
 
 const errorBox = document.querySelector('.error-section')
 const errorText = document.querySelector('.error')
+const closeErrorBtn = document.querySelector('.close-error-btn')
 
-const menuItems = document.querySelectorAll('.nav-desktop a.nav__link')
+const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
 const scrollSpySections = document.querySelectorAll('.section')
 
 //----------------------------------------------------------------
@@ -48,7 +49,12 @@ const handleCurrentYear = () => {
 //----------------------------------------------------------------
 
 const showError = () => {
-	errorBox.style.display = 'block'
+	errorBox.style.display = 'flex'
+}
+
+const closeError = () => {
+	errorBox.style.display = ''
+	
 }
 
 const clearError = () => {
@@ -128,6 +134,7 @@ const checkSite = () => {
 	if (document.body.classList.contains('kcal-calc')) {
 		closeBtn.addEventListener('click', closeResultPopup)
 		calcBtn.addEventListener('click', checkCalc)
+		closeErrorBtn.addEventListener('click', closeError)
 	}
 }
 
