@@ -19,7 +19,7 @@ let kcal = document.querySelector('.kcal')
 const errorBox = document.querySelector('.error-section')
 const errorText = document.querySelector('.error')
 
-const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
+const menuItems = document.querySelectorAll('.nav-desktop a.nav__link')
 const scrollSpySections = document.querySelectorAll('.section')
 
 //----------------------------------------------------------------
