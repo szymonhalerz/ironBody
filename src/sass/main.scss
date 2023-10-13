@@ -632,21 +632,33 @@ body {
 			}
 
 			&__list {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				list-style: none;
 
 				&-element {
-					margin-bottom: 0.5em;
+					display: block;
+					margin-bottom: 0.3em;
+					padding: 0.5em 1em;
+					width: 100%;
+					max-width: 500px;
+					text-align: center;
+					background-color: c.$navy;
+					border-radius: 0.8em;
+					cursor: pointer;
+					transition: background-color 0.3s;
 
 					&--link {
 						text-decoration: none;
-						color: c.$black;
-						font-size: 1.5rem;
-						transition: font-weight 0.3s;
+						color: c.$white;
+						font-size: 1.4rem;
 
-						&:hover {
-							color: c.$navy;
-							border-bottom: 2px solid c.$navy;
-						}
+					}
+
+					&:hover {
+						background-color: c.$black;
 					}
 				}
 			}
