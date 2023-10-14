@@ -54,7 +54,6 @@ const showError = () => {
 
 const closeError = () => {
 	errorBox.style.display = ''
-	
 }
 
 const clearError = () => {
@@ -98,6 +97,67 @@ const kcalCalc = () => {
 	resultPopup.style.display = 'flex'
 }
 
+//----------------------------------------------------------------
+
+const weightWater = document.querySelector('#weight-w')
+const activityWater = document.querySelector('#activity-level-w')
+const calcBtnWater = document.querySelector('#calc-btn-w')
+const errorBoxWater = document.querySelector('.error-section')
+const errorBoxWaterCloseBtn = document.querySelector('#close-error-btn-w')
+const resultWater = document.querySelector('#result-w')
+const waterVolume = document.querySelector('.water-volume')
+const warmClimat = document.querySelector('#warm-climat-check')
+const closeResultWaterBtn = document.querySelector('#close-w')
+
+const showError2 = () => {
+	errorBoxWater.style.display = 'flex'
+}
+
+const closeError2 = () => {
+	errorBoxWater.style.display = ''
+}
+
+const checkWater = () => {
+	if (weightWater.value !== '' && activityWater.options[activityWater.selectedIndex].value !== '') {
+		closeError2()
+		waterCalc()
+	} else {
+		showError2()
+	}
+}
+
+const waterCalc = () => {
+	let weightW = parseFloat(weightWater.value)
+	let activityLevelWater = activityWater.options[activityWater.selectedIndex].value
+	let waterAmount = 0
+
+	if (warmClimat.checked) {
+		waterAmount = weightW * parseFloat(activityLevelWater) * 1.1
+	} else {
+		waterAmount = weightW * parseFloat(activityLevelWater)
+	}
+
+	let waterAmount2 = parseInt(waterAmount)
+	waterVolume.textContent = waterAmount2 + ' ml'
+	resultPopup.style.display = 'flex'
+}
+
+const checkSite2 = () => {
+	if (document.body.classList.contains('water-calc')) {
+		errorBoxWaterCloseBtn.addEventListener('click', closeError2)
+		calcBtnWater.addEventListener('click', checkWater)
+
+		closeResultWaterBtn.addEventListener('click', e => {
+			resultPopup.style.display = ''
+			weightWater.value = ''
+			warmClimat.checked = false
+			activityWater.selectedIndex = 0
+		})
+	}
+}
+
+//----------------------------------------------------------------
+
 const closeResultPopup = () => {
 	resultPopup.style.display = ''
 	weight.value = ''
@@ -105,6 +165,7 @@ const closeResultPopup = () => {
 	age.value = ''
 	manRadio.checked = false
 	womanRadio.checked = false
+	activity.selectedIndex = 0
 }
 
 //----------------------------------------------------------------
@@ -143,4 +204,5 @@ const checkSite = () => {
 burgerBtn.addEventListener('click', handleNav)
 handleCurrentYear()
 checkSite()
+checkSite2()
 window.addEventListener('scroll', handleScrollSpy)

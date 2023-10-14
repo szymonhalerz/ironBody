@@ -613,6 +613,18 @@ body {
 			}
 		}
 	}
+
+	.check-climat {
+		margin: 1em 0em;
+		padding: 1em;
+		background-color: c.$myblue;
+		text-align: center;
+
+		&__label {
+			font-size: 1.5rem;
+			color: c.$white;
+		}
+	}
 }
 
 //BLOG
