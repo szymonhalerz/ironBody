@@ -103,6 +103,8 @@ const closeResultPopup = () => {
 	weight.value = ''
 	height.value = ''
 	age.value = ''
+	manRadio.checked = false
+	womanRadio.checked = false
 }
 
 //----------------------------------------------------------------

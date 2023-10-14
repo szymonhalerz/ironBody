@@ -132,7 +132,7 @@ body {
 				margin: 0.5em 0em;
 				padding: 0.5em 1em;
 				text-decoration: none;
-				font-size: 1.4rem;
+				font-size: 1.7rem;
 				color: c.$white;
 				transition: font-weight 0.3s, transform 0.3s;
 
@@ -654,7 +654,6 @@ body {
 						text-decoration: none;
 						color: c.$white;
 						font-size: 1.4rem;
-
 					}
 
 					&:hover {
@@ -1023,6 +1022,17 @@ body {
 }
 
 @media (min-width: 768px) {
+	// header
+	.header {
+		.navbar {
+			.nav {
+				&__link {
+					font-size: 2.1rem;
+				}
+			}
+		}
+	}
+
 	.head-title {
 		font-size: 2.5rem;
 	}
