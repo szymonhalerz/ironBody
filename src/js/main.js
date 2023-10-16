@@ -23,6 +23,16 @@ const closeErrorBtn = document.querySelector('.close-error-btn')
 const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
 const scrollSpySections = document.querySelectorAll('.section')
 
+const weightWater = document.querySelector('#weight-w')
+const activityWater = document.querySelector('#activity-level-w')
+const calcBtnWater = document.querySelector('#calc-btn-w')
+const errorBoxWater = document.querySelector('.error-section')
+const errorBoxWaterCloseBtn = document.querySelector('#close-error-btn-w')
+const resultWater = document.querySelector('#result-w')
+const waterVolume = document.querySelector('.water-volume')
+const warmClimat = document.querySelector('#warm-climat-check')
+const closeResultWaterBtn = document.querySelector('#close-w')
+
 //----------------------------------------------------------------
 
 const handleNav = () => {
@@ -98,16 +108,6 @@ const kcalCalc = () => {
 }
 
 //----------------------------------------------------------------
-
-const weightWater = document.querySelector('#weight-w')
-const activityWater = document.querySelector('#activity-level-w')
-const calcBtnWater = document.querySelector('#calc-btn-w')
-const errorBoxWater = document.querySelector('.error-section')
-const errorBoxWaterCloseBtn = document.querySelector('#close-error-btn-w')
-const resultWater = document.querySelector('#result-w')
-const waterVolume = document.querySelector('.water-volume')
-const warmClimat = document.querySelector('#warm-climat-check')
-const closeResultWaterBtn = document.querySelector('#close-w')
 
 const showError2 = () => {
 	errorBoxWater.style.display = 'flex'
