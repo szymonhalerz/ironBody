@@ -652,9 +652,8 @@ body {
 					max-width: 500px;
 					text-align: center;
 					background-color: c.$navy;
-					border-radius: 0.8em;
 					cursor: pointer;
-					transition: background-color 0.3s;
+					transition: background-color 0.3s, transform .3s;
 
 					&--link {
 						text-decoration: none;
@@ -664,6 +663,7 @@ body {
 
 					&:hover {
 						background-color: c.$black;
+						transform: scale(1.04);
 					}
 				}
 			}
