@@ -25,7 +25,7 @@
     "gulp-uglify": "^3.0.2",
     "sass": "^1.49.7"
   },
-  "description": "",
+  "description": "https://szymonhalerz.github.io/ironBody/",
   "dependencies": {
     "update": "^0.7.4"
   }
