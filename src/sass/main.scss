@@ -116,7 +116,7 @@ body {
 				right: 0;
 				bottom: 0;
 				background-color: c.$navy;
-				overflow: scroll;
+				overflow-y: hidden;
 				transform: translateX(-102%);
 				transition: transform 0.3s;
 				z-index: 10;
@@ -214,12 +214,11 @@ body {
 			.img {
 				margin-bottom: 1em;
 				width: 100%;
-				border-radius: 0.8em;
 				filter: saturate(0);
 				transition: transform 0.3s;
 
 				&:hover {
-					transform: scale(1.05);
+					transform: scale(0.97);
 				}
 			}
 		}
@@ -260,12 +259,11 @@ body {
 			background-color: c.$blue;
 			color: c.$white;
 			cursor: pointer;
-			transition: background-color 0.3s, border-radius 0.3s, transform 0.3s;
+			transition: background-color 0.3s, transform 0.3s;
 
 			&:hover {
 				background-color: c.$light-navy;
-				border-radius: 1.3em;
-				transform: scale(1.1);
+				transform: scale(0.97);
 			}
 		}
 	}
@@ -294,7 +292,6 @@ body {
 				margin: 1em 0em;
 				padding: 2em;
 				background-color: c.$black;
-				border-radius: 0.8em;
 
 				.link,
 				.phone-number,
@@ -377,7 +374,6 @@ body {
 		.map {
 			margin-bottom: 2em;
 			width: 100%;
-			border-radius: 0.8em;
 		}
 	}
 }
@@ -518,14 +514,12 @@ body {
 			background-color: c.$black;
 			color: c.$white;
 			border: none;
-			-webkit-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
-			-moz-box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
-			box-shadow: 15px 11px 24px -6px rgba(66, 68, 90, 1);
-			transition: border-radius 0.3s;
+			transition: transform 0.3s, background-color .3s;
 			cursor: pointer;
 
 			&:hover {
-				border-radius: 3em;
+				transform: scale(0.95);
+				background-color: c.$myblue-dark;
 			}
 		}
 	}
@@ -822,10 +816,6 @@ body {
 				.img {
 					margin-bottom: 1.5em;
 					width: 90%;
-
-					&:hover {
-						transform: scale(1.03);
-					}
 				}
 			}
 		}
@@ -1400,7 +1390,6 @@ body {
 	.contact {
 		.contact-box {
 			background-color: c.$black;
-			border-radius: 0.8em;
 			margin: 1em 0em;
 			padding: 2em;
 
