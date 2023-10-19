@@ -39,6 +39,7 @@ const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
 	navMobile.classList.toggle('nav-mobile--active')
 	burgerBtn.classList.toggle('is-active')
+	document.body.style = 'overflow: hidden;'
 }
 
 navMobile.querySelectorAll('a.nav__link').forEach(el =>
