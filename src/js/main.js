@@ -1,13 +1,8 @@
 const burgerBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav-mobile')
 
-const footerYear = document.querySelector('.footer__year')
-
 const womanRadio = document.querySelector('#woman')
 const manRadio = document.querySelector('#man')
-const weight = document.querySelector('#weight')
-const height = document.querySelector('#height')
-const age = document.querySelector('#age')
 const activity = document.querySelector('#activity-level')
 const dietGoal = document.querySelector('#diet-goal')
 const calcBtn = document.querySelector('.calc-btn')
@@ -19,9 +14,6 @@ let kcal = document.querySelector('.kcal')
 const errorBox = document.querySelector('.error-section')
 const errorText = document.querySelector('.error')
 const closeErrorBtn = document.querySelector('.close-error-btn')
-
-const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
-const scrollSpySections = document.querySelectorAll('.section')
 
 const weightWater = document.querySelector('#weight-w')
 const activityWater = document.querySelector('#activity-level-w')
@@ -53,6 +45,8 @@ navMobile.querySelectorAll('a.nav__link').forEach(el =>
 //----------------------------------------------------------------
 
 const handleCurrentYear = () => {
+	const footerYear = document.querySelector('.footer__year')
+
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
@@ -88,6 +82,10 @@ const checkCalc = () => {
 }
 
 const kcalCalc = () => {
+	const weight = document.querySelector('#weight')
+	const height = document.querySelector('#height')
+	const age = document.querySelector('#age')
+
 	let weight2 = parseFloat(weight.value)
 	let height2 = parseFloat(height.value)
 	let age2 = parseFloat(age.value)
@@ -172,14 +170,13 @@ const closeResultPopup = () => {
 //----------------------------------------------------------------
 
 const handleScrollSpy = () => {
+	const menuItems = document.querySelectorAll('.nav-desktop .nav__link')
+	const scrollSpySections = document.querySelectorAll('.section')
+
 	if (document.body.classList.contains('main-page')) {
 		const sections = []
 
 		scrollSpySections.forEach(section => {
-			// console.log(window.scrollY);
-			// console.log(section.offsetTop);
-			// console.log(section.offsetHeight);
-
 			if (window.scrollY <= section.offsetTop + section.offsetHeight - 130) {
 				sections.push(section)
 

@@ -481,21 +481,38 @@ body {
 		flex-direction: column;
 
 		select {
+			position: relative;
+			appearance: none;
 			margin-bottom: 1em;
 			padding: 1.2em;
-			border: 1px solid c.$black;
-			background: none;
 			font-size: 1.4rem;
 			text-align: center;
+			background-color: c.$myblue;
+			color: c.$white;
+			cursor: pointer;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: c.$myblue-dark;
+			}
 
 			&:focus {
 				outline: none;
 			}
+
+			option {
+				background-color: c.$white;
+				color: c.$black;
+			}
 		}
 
 		.activity-level-info {
+			margin-top: 1em;
+			margin-bottom: 1.5em;
+
 			p {
-				margin-bottom: 0.5em;
+				margin-top: 1em;
+				padding: 0.5em 0em;
 				font-size: 1.4rem;
 			}
 		}
@@ -514,7 +531,7 @@ body {
 			background-color: c.$black;
 			color: c.$white;
 			border: none;
-			transition: transform 0.3s, background-color .3s;
+			transition: transform 0.3s, background-color 0.3s;
 			cursor: pointer;
 
 			&:hover {
@@ -653,7 +670,7 @@ body {
 					text-align: center;
 					background-color: c.$navy;
 					cursor: pointer;
-					transition: background-color 0.3s, transform .3s;
+					transition: background-color 0.3s, transform 0.3s;
 
 					&--link {
 						text-decoration: none;
@@ -1202,8 +1219,8 @@ body {
 
 			.activity-level-info {
 				p {
+					padding: 0.7em 0em;
 					font-size: 1.4rem;
-					margin-bottom: 1em;
 				}
 			}
 		}
@@ -1462,6 +1479,15 @@ body {
 		.error-section {
 			width: 100%;
 			max-width: 850px;
+		}
+
+		.container {
+			.activity-level-info {
+				p {
+					padding: 0.8em 0em;
+					font-size: 1.5rem;
+				}
+			}
 		}
 	}
 
