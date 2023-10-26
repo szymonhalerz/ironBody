@@ -555,9 +555,9 @@ body {
 		width: 90%;
 		border-radius: 0.8em;
 		background-color: c.$black;
-		-webkit-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
-		-moz-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
-		box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
+		-webkit-box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
+		-moz-box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
+		box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
 
 		.error {
 			text-align: center;
@@ -574,11 +574,11 @@ body {
 			border: none;
 			background-color: c.$white;
 			color: c.$black;
-			transition: border-radius 0.3s;
+			transition: transform 0.3s;
 			cursor: pointer;
 
 			&:hover {
-				border-radius: 3em;
+				transform: scale(0.94);
 			}
 		}
 	}
@@ -595,9 +595,9 @@ body {
 		padding: 4em 1.5em;
 		border-radius: 0.8em;
 		background-color: c.$black;
-		-webkit-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
-		-moz-box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
-		box-shadow: 0px 0px 35px 3px rgba(2, 62, 138, 1);
+		-webkit-box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
+		-moz-box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
+		box-shadow: 0px 0px 20px 3px rgba(2, 62, 138, 1);
 
 		.text {
 			margin-bottom: 2em;
@@ -616,11 +616,12 @@ body {
 			border: none;
 			background-color: c.$white;
 			color: c.$black;
-			transition: border-radius 0.3s;
+			transition: transform 0.3s;
 			cursor: pointer;
 
 			&:hover {
-				border-radius: 3em;
+				// border-radius: 3em;
+				transform: scale(0.94);
 			}
 		}
 	}
